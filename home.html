@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   <!-- daisy ui -->
+    <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <!-- font cdn -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>I am home page</title>
 </head>
+
 <body class="bg-[#f4f5f7] h-[100vh] max-w-lg mx-auto">
     <nav class="  flex justify-between items-center border-b-1 border-gray-200 p-2">
         <!-- left div -->
@@ -21,66 +25,90 @@
             </div>
         </div>
         <!-- right div -->
-         <div>
-            <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log Out</button>
-         </div>
+        <div>
+            <button class="btn text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i> Log
+                Out</button>
+        </div>
     </nav>
     <main class="p-3">
         <!-- transaction section -->
-         <div>
-             <!-- text div -->
+        <div>
+            <!-- text div -->
             <div>
-            <h1 class="text-2xl font-bold mb-2">🔥Welcome to Payooo!</h1>
-            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and great. </p>
+                <h1 class="text-2xl font-bold mb-2">🔥Welcome to Payooo!</h1>
+                <p>Enjoy easy and convenient financial services with us. Cashout charge is low and great. </p>
+            </div>
+            <!-- box div -->
+            <div class="mt-10 grid grid-cols-3 gap-3">
+                <!-- box-1 -->
+                <div
+                    class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 rounded-md py-4 px-5">
+                    <img src="./assets/wallet1.png" alt="">
+                    <h6 class="text-[14px]">Add money</h6>
+                </div>
+                <!-- box 1 done -->
+                <!-- box-2 -->
+                <div
+                    class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
+                    <img src="./assets/send1.png" alt="">
+                    <h6 class="text-[14px]">CashOut</h6>
+                </div>
+                <!-- box 2 done -->
+                <!-- box-3 -->
+                <div
+                    class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
+                    <img src="./assets/money1.png" alt="">
+                    <h6 class="text-[14px]">Transfer Money</h6>
+                </div>
+                <!-- box 3 done -->
+                <!-- box-4 -->
+                <div
+                    class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
+                    <img src="./assets/bonus1.png" alt="">
+                    <h6 class="text-[14px]">Get Bonus</h6>
+                </div>
+                <!-- box 4 done -->
+                <!-- box-5 -->
+                <div
+                    class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
+                    <img src="./assets/purse1.png" alt="">
+                    <h6 class="text-[14px]">Pay Bill</h6>
+                </div>
+                <!-- box 5 done -->
+                <!-- box-6 -->
+                <div
+                    class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
+                    <img src="./assets/transaction1.png" alt="">
+                    <h6 class="text-[14px]">Transactions</h6>
+                </div>
+                <!-- box 6 done -->
+            </div>
         </div>
-        <!-- box div -->
-         <div class="mt-10 grid grid-cols-3 gap-3">
-            <!-- box-1 -->
-             <div class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 rounded-md py-4 px-5">
-                <img src="./assets/wallet1.png" alt="">
-                <h6 class="text-[14px]">Add money</h6>
-             </div>
-             <!-- box 1 done -->
-            <!-- box-2 -->
-             <div class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
-                <img src="./assets/send1.png" alt="">
-                <h6 class="text-[14px]">CashOut</h6>
-             </div>
-             <!-- box 2 done -->
-            <!-- box-3 -->
-             <div class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
-                <img src="./assets/money1.png" alt="">
-                <h6 class="text-[14px]">Transfer Money</h6>
-             </div>
-             <!-- box 3 done -->
-            <!-- box-4 -->
-             <div class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
-                 <img src="./assets/bonus1.png" alt="">
-                <h6 class="text-[14px]">Get Bonus</h6>
-             </div>
-             <!-- box 4 done -->
-            <!-- box-5 -->
-             <div class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
-               <img src="./assets/purse1.png" alt="">
-                <h6 class="text-[14px]">Pay Bill</h6>
-             </div>
-             <!-- box 5 done -->
-            <!-- box-6 -->
-             <div class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
-                <img src="./assets/transaction1.png" alt="">
-                <h6 class="text-[14px]">Transactions</h6>
-             </div>
-             <!-- box 6 done -->
-         </div>
-         </div>
-         <!-- transaction section end -->
+        <!-- transaction section end -->
 
-         <!-- form start -->
-          <form>
-            
-          </form>
-       
-        
+        <!--all form start -->
+        <div>
+            <h1>Add Money</h1>
+            <form class="bg-white rounded-3xl p-8">
+                <label class="font-semibold" for="">Select A Bank</label><br>
+                <select class="select select-accent rounded-3xl bg-[#f4f5f7] mt-2">
+                    <option>Light mode</option>
+                    <option>Dark mode</option>
+                    <option>System</option>
+                </select><br>
+                <label class="font-semibold" for="">Bank Account Number</label> <br>
+            <input  type="number" placeholder="Enter account number" class="input rounded-3xl bg-[#f4f5f7] mt-2" /><br>
+                <label class="font-semibold" for="">Amount to Add</label> <br>
+            <input  type="number" placeholder="Add Amount to withdraw" class="input rounded-3xl bg-[#f4f5f7] mt-2" /><br>
+                <label class="font-semibold" for="">Pin Number</label> <br>
+            <input  type="number" placeholder="Enter 4 digit pin number" class="input rounded-3xl bg-[#f4f5f7] mt-2" /><br>
+
+            </form>
+        </div>
+
+
+
     </main>
 </body>
+
 </html>
