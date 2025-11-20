@@ -20,7 +20,7 @@
         <div class="flex items-center justify-center gap-2">
             <img class="h-[50px]" src="./assets/Group.png" alt="error">
             <div>
-                <h3  class="font-extrabold text-[18px]">$<span id="available-balance">45000</span></h3>
+                <h3 class="font-extrabold text-[18px]">$<span id="available-balance">45000</span></h3>
                 <h6 class="font-normal text-[14px]">Available Balance</h6>
             </div>
         </div>
@@ -41,14 +41,14 @@
             <!-- box div -->
             <div class="mt-10 grid grid-cols-3 gap-3">
                 <!-- box-1 -->
-                <div
+                <div id="add-money-main-div"
                     class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 rounded-md py-4 px-5">
                     <img src="./assets/wallet1.png" alt="">
                     <h6 class="text-[14px]">Add money</h6>
                 </div>
                 <!-- box 1 done -->
                 <!-- box-2 -->
-                <div
+                <div id="cash-out-main-div"
                     class="flex items-center justify-center flex-col gap-2 border-1 border-gray-200 py-4 px-5 rounded-md">
                     <img src="./assets/send1.png" alt="">
                     <h6 class="text-[14px]">CashOut</h6>
@@ -88,22 +88,42 @@
 
         <!--all form start -->
         <div>
-            <h1 class="font-extrabold pl-8 my-2">Add Money</h1>
-            <form class="bg-white rounded-3xl p-8">
-                <label class="font-semibold" for="">Select A Bank</label><br>
-                <select id="bankName" class="w-full select select-accent rounded-3xl bg-[#f4f5f7] mt-2">
-                    <option>Light mode</option>
-                    <option>Dark mode</option>
-                    <option>System</option>
-                </select><br>
-                <label class="font-semibold" for="">Bank Account Number</label> <br>
-            <input id="accountNumber"  type="number" placeholder="Enter account number" class="input w-full rounded-3xl bg-[#f4f5f7] mt-2" /><br>
-                <label class="font-semibold" for="">Amount to Add</label> <br>
-            <input id="addAmount"  type="number" placeholder="Add Amount to withdraw" class="input rounded-3xl w-full bg-[#f4f5f7] mt-2" /><br>
-                <label class="font-semibold" for="">Pin Number</label> <br>
-            <input id="addPin"  type="number" placeholder="Enter 4 digit pin number" class="input rounded-3xl w-full bg-[#f4f5f7] mt-2" /><br>
-                <button id="add-money-btn" class="btn bg-[#0874f2] mt-2 text-white w-full rounded-3xl">Add Money</button>
-            </form>
+            <!-- add money form -->
+            <div style="display: none;" id="add-money-parent">
+                <h1 class="font-extrabold pl-8 my-2">Add Money</h1>
+                <form class="bg-white rounded-3xl p-8">
+                    <label class="font-semibold" for="">Select A Bank</label><br>
+                    <select id="bankName" class="w-full select select-accent rounded-3xl bg-[#f4f5f7] mt-2">
+                        <option>Light mode</option>
+                        <option>Dark mode</option>
+                        <option>System</option>
+                    </select><br>
+                    <label class="font-semibold" for="">Bank Account Number</label> <br>
+                    <input id="accountNumber" type="number" placeholder="Enter account number"
+                        class="input w-full rounded-3xl bg-[#f4f5f7] mt-2" /><br>
+                    <label class="font-semibold" for="">Amount to Add</label> <br>
+                    <input id="addAmount" type="number" placeholder="Add Amount to withdraw"
+                        class="input rounded-3xl w-full bg-[#f4f5f7] mt-2" /><br>
+                    <label class="font-semibold" for="">Pin Number</label> <br>
+                    <input id="addPin" type="number" placeholder="Enter 4 digit pin number"
+                        class="input rounded-3xl w-full bg-[#f4f5f7] mt-2" /><br>
+                    <button id="add-money-btn" class="btn bg-[#0874f2] mt-2 text-white w-full rounded-3xl">Add
+                        Money</button>
+                </form>
+            </div>
+            <!-- add money form end -->
+            
+            <!-- cash out form -->
+             <div style="display: none;" id="cash-out-parent">
+                 <h1>Cash Out</h1>
+                 <form>
+
+                 </form>
+
+             </div>
+
+            
+
         </div>
 
 

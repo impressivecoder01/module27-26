@@ -21,3 +21,15 @@ document.getElementById('add-money-btn').addEventListener('click', function(even
     
     
 })
+
+// toggling feature
+document.getElementById('add-money-main-div').addEventListener('click', function(event){
+    event.preventDefault();
+    document.getElementById('cash-out-parent').style.display = 'none'
+    document.getElementById('add-money-parent').style.display = 'block'
+})
+document.getElementById('cash-out-main-div').addEventListener('click', function(event){
+    event.preventDefault()
+    document.getElementById('cash-out-parent').style.display = 'block'
+    document.getElementById('add-money-parent').style.display = 'none'
+})
