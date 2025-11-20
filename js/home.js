@@ -33,3 +33,15 @@ document.getElementById('cash-out-main-div').addEventListener('click', function(
     document.getElementById('cash-out-parent').style.display = 'block'
     document.getElementById('add-money-parent').style.display = 'none'
 })
+
+// cash out function
+document.getElementById('cash-out-btn').addEventListener('click', function(event){
+    event.preventDefault();
+    const validPin = 2111;
+    const pin = parseInt(document.getElementById('cash-out-pin').value);
+    const amount = parseInt(document.getElementById('withdraw-amount').value);
+    const availableBalance = parseInt(document.getElementById('available-balance').innerText)
+    const totalNewAvailableBalance = availableBalance - amount;
+    console.log(totalNewAvailableBalance)
+    document.getElementById('available-balance').innerText= totalNewAvailableBalance
+})
