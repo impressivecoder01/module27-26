@@ -41,7 +41,13 @@ document.getElementById('cash-out-btn').addEventListener('click', function(event
     const pin = parseInt(document.getElementById('cash-out-pin').value);
     const amount = parseInt(document.getElementById('withdraw-amount').value);
     const availableBalance = parseInt(document.getElementById('available-balance').innerText)
-    const totalNewAvailableBalance = availableBalance - amount;
-    console.log(totalNewAvailableBalance)
-    document.getElementById('available-balance').innerText= totalNewAvailableBalance
+    if(pin === validPin){
+
+        const totalNewAvailableBalance = availableBalance - amount;
+        console.log(totalNewAvailableBalance)
+        document.getElementById('available-balance').innerText= totalNewAvailableBalance
+    }
+    else{
+        alert('Wrong Pin')
+    }
 })
