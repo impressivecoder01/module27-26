@@ -77,6 +77,16 @@ document.getElementById('cash-out-main-div').addEventListener('click',function()
     document.getElementById('cash-out-parent').style.display = 'block'
 })
 // cash out finished
+// transfer start
+document.getElementById('transfer-main-div').addEventListener('click',function(){
+    const allParentDivs = document.getElementsByClassName('form');
+    for(const allParentDiv of allParentDivs){
+        allParentDiv.style.display = 'none'
+        // console.log(allParentDiv)
+    }
+    document.getElementById('head').style.display = 'block'
+})
+// transfer end
 // toggle reuseable function finished
 
 // cash out function
