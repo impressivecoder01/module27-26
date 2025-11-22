@@ -1,11 +1,23 @@
+// function to get input values
+function getInputValueNumber(id){
+    const inputFieldValueNumber = parseInt(document.getElementById(id).value);
+    // console.log(inputFieldValueNumber)
+    return inputFieldValueNumber;
+}
 document.getElementById('add-money-btn').addEventListener('click', function(event){
     event.preventDefault();
     const validPin = 2111;
-    const bank = document.getElementById('bankName').value;
-    const accountNumber = document.getElementById('accountNumber').value;
-    const amount = parseInt(document.getElementById('addAmount').value);
-    const pin = parseInt(document.getElementById('addPin').value);
+    const bank = getInputValueNumber('bankName')
+    // console.log(bank)
+    // const bank = document.getElementById('bankName').value;
+    // const accountNumber = document.getElementById('accountNumber').value;
+    const accountNumber = getInputValueNumber('accountNumber');
+    // const amount = parseInt(document.getElementById('addAmount').value);
+    const amount = getInputValueNumber('addAmount')
+    // const pin = parseInt(document.getElementById('addPin').value);
+    const pin = getInputValueNumber('addPin')
     const availableBalance = parseInt(document.getElementById('available-balance').innerText);
+    // const availableBalance = getInputValueNumber('available-balance').innerText;
     if(accountNumber.length < 11){
         alert('Provide a valid account number')
         return;
