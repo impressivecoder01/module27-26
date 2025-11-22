@@ -4,6 +4,11 @@ function getInputValueNumber(id){
     // console.log(inputFieldValueNumber)
     return inputFieldValueNumber;
 }
+// function to get input text
+function getInputTextNumber (id){
+    const inputFieldValueNumber = parseInt(document.getElementById(id).innerText);
+    return inputFieldValueNumber;
+}
 document.getElementById('add-money-btn').addEventListener('click', function(event){
     event.preventDefault();
     const validPin = 2111;
@@ -16,8 +21,8 @@ document.getElementById('add-money-btn').addEventListener('click', function(even
     const amount = getInputValueNumber('addAmount')
     // const pin = parseInt(document.getElementById('addPin').value);
     const pin = getInputValueNumber('addPin')
-    const availableBalance = parseInt(document.getElementById('available-balance').innerText);
-    // const availableBalance = getInputValueNumber('available-balance').innerText;
+    // const availableBalance = parseInt(document.getElementById('available-balance').innerText);
+    const availableBalance = getInputTextNumber('available-balance');
     if(accountNumber.length < 11){
         alert('Provide a valid account number')
         return;
@@ -50,13 +55,16 @@ document.getElementById('cash-out-main-div').addEventListener('click', function(
 document.getElementById('cash-out-btn').addEventListener('click', function(event){
     event.preventDefault();
     const validPin = 2111;
-    const pin = parseInt(document.getElementById('cash-out-pin').value);
-    const amount = parseInt(document.getElementById('withdraw-amount').value);
-    const availableBalance = parseInt(document.getElementById('available-balance').innerText)
+    // const pin = parseInt(document.getElementById('cash-out-pin').value);
+    const pin = getInputValueNumber('cash-out-pin')
+    // const amount = parseInt(document.getElementById('withdraw-amount').value);
+    const amount = getInputValueNumber('withdraw-amount')
+    // const availableBalance = parseInt(document.getElementById('available-balance').innerText)
+    const availableBalance = getInputTextNumber('available-balance')
     if(pin === validPin){
 
         const totalNewAvailableBalance = availableBalance - amount;
-        console.log(totalNewAvailableBalance)
+        // console.log(totalNewAvailableBalance)
         document.getElementById('available-balance').innerText= totalNewAvailableBalance
     }
     else{
