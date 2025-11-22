@@ -45,16 +45,39 @@ document.getElementById('add-money-btn').addEventListener('click', function(even
 })
 
 // toggling feature
-document.getElementById('add-money-main-div').addEventListener('click', function(event){
-    event.preventDefault();
-    document.getElementById('cash-out-parent').style.display = 'none'
+// document.getElementById('add-money-main-div').addEventListener('click', function(event){
+//     event.preventDefault();
+//     document.getElementById('cash-out-parent').style.display = 'none'
+//     document.getElementById('add-money-parent').style.display = 'block'
+// })
+// document.getElementById('cash-out-main-div').addEventListener('click', function(event){
+//     event.preventDefault()
+//     document.getElementById('cash-out-parent').style.display = 'block'
+//     document.getElementById('add-money-parent').style.display = 'none'
+// })
+
+// reuseable toggle feature
+// add money start
+document.getElementById('add-money-main-div').addEventListener('click',function(){
+    const allParentDivs = document.getElementsByClassName('form');
+    for(const allParentDiv of allParentDivs){
+        allParentDiv.style.display = 'none'
+        // console.log(allParentDiv)
+    }
     document.getElementById('add-money-parent').style.display = 'block'
 })
-document.getElementById('cash-out-main-div').addEventListener('click', function(event){
-    event.preventDefault()
+// add money finished
+// cash out start
+document.getElementById('cash-out-main-div').addEventListener('click',function(){
+    const allParentDivs = document.getElementsByClassName('form');
+    for(const allParentDiv of allParentDivs){
+        allParentDiv.style.display = 'none'
+        // console.log(allParentDiv)
+    }
     document.getElementById('cash-out-parent').style.display = 'block'
-    document.getElementById('add-money-parent').style.display = 'none'
 })
+// cash out finished
+// toggle reuseable function finished
 
 // cash out function
 document.getElementById('cash-out-btn').addEventListener('click', function(event){
