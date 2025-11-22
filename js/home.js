@@ -9,6 +9,10 @@ function getInputTextNumber (id){
     const inputFieldValueNumber = parseInt(document.getElementById(id).innerText);
     return inputFieldValueNumber;
 }
+// function to set inner text
+function setInnerText(value){
+    document.getElementById('available-balance').innerText = value
+}
 document.getElementById('add-money-btn').addEventListener('click', function(event){
     event.preventDefault();
     const validPin = 2111;
@@ -30,7 +34,8 @@ document.getElementById('add-money-btn').addEventListener('click', function(even
     if(pin === validPin){
         const totalNewAvailableBalance = amount + availableBalance;
     // console.log(totalNewAvailableBalance)
-    document.getElementById('available-balance').innerText = totalNewAvailableBalance;
+    // document.getElementById('available-balance').innerText = totalNewAvailableBalance;
+    setInnerText(totalNewAvailableBalance)
     }
     else{
         alert('provide a valid pin please')
@@ -65,7 +70,8 @@ document.getElementById('cash-out-btn').addEventListener('click', function(event
 
         const totalNewAvailableBalance = availableBalance - amount;
         // console.log(totalNewAvailableBalance)
-        document.getElementById('available-balance').innerText= totalNewAvailableBalance
+        // document.getElementById('available-balance').innerText= totalNewAvailableBalance
+        setInnerText(totalNewAvailableBalance)
     }
     else{
         alert('Wrong Pin')
