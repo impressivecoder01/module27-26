@@ -112,11 +112,30 @@ document.getElementById('cash-out-btn').addEventListener('click', function(event
 })
 
 // toggle for selected button
-document.getElementById('add-money-main-div').addEventListener('click', function(){
-   const allDivs = document.getElementsByClassName('form2')
+
+// document.getElementById('add-money-main-div').addEventListener('click', function(){
+//    const allDivs = document.getElementsByClassName('form2')
+// //    console.log(allDivs)
+//     for(const allDiv of  allDivs){
+//         allDiv.classList.remove = 'white'
+//     }
+//     document.getElementById('add-money-main-div').classList.add = 'white'
+// })
+
+// reuseable function for toggle
+function toggleForEffect(id){
+    const allDivs = document.getElementsByClassName('form2')
 //    console.log(allDivs)
     for(const allDiv of  allDivs){
-        allDiv.style.backgroundColor = '[#f4f5f7]'
+        allDiv.classList.remove ('bg-white')
     }
-    document.getElementById('add-money-main-div').style.backgroundColor = 'white'
+    document.getElementById(id).classList.add  ('bg-white')
+}
+
+document.getElementById('cash-out-main-div').addEventListener('click',function(){
+    toggleForEffect('cash-out-main-div')
+})
+
+document.getElementById('add-money-main-div').addEventListener('click',function(){
+    toggleForEffect('add-money-main-div')
 })
