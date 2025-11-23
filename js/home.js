@@ -110,3 +110,13 @@ document.getElementById('cash-out-btn').addEventListener('click', function(event
         alert('Wrong Pin')
     }
 })
+
+// toggle for selected button
+document.getElementById('add-money-main-div').addEventListener('click', function(){
+   const allDivs = document.getElementsByClassName('form2')
+//    console.log(allDivs)
+    for(const allDiv of  allDivs){
+        allDiv.style.backgroundColor = '[#f4f5f7]'
+    }
+    document.getElementById('add-money-main-div').style.backgroundColor = 'white'
+})
