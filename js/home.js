@@ -139,3 +139,10 @@ document.getElementById('cash-out-main-div').addEventListener('click',function()
 document.getElementById('add-money-main-div').addEventListener('click',function(){
     toggleForEffect('add-money-main-div')
 })
+document.getElementById('transfer-main-div').addEventListener('click',function(){
+    toggleForEffect('transfer-main-div')
+})
+// 
+document.getElementById('transactions-main-div').addEventListener('click',function(){
+    toggleForEffect('transactions-main-div')
+})
